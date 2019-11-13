@@ -3,6 +3,7 @@ import Analysis from '../pages/analysis'
 import Test from '../pages/test'
 import FemaleTest from '../pages/test/Female'
 import MaleTest from '../pages/test/MaleTest'
+import Experience from "../pages/experience";
 export default [
   {
     name: '首页',
@@ -33,5 +34,11 @@ export default [
     path: '/femaletest',
     component: FemaleTest,
     key: 4
+  },
+  {
+    name: '恋爱经验',
+    path: '/experience',
+    component: Experience,
+    key: 5
   }
 ]
