@@ -9,12 +9,12 @@ const Analysis = () => {
       {
         question.map((item, index) => {
           return (
-            <div>
+            <div key={index}>
               <p style={{ marginBottom: '3vw' }}>{item.title}<br />{item.A1}<br />{item.A2}<br />{item.A3}<br /></p>
               <Popover content={item.A}>
                 <Button type='primary'>答案</Button>
               </Popover>
-              <img src={`/${index + 1}.jpg`} style={{ marginTop: '3vw', marginBottom: '3vw' }} alt= ""/>
+              <img src={`/${index + 1}.jpg`} style={{ marginTop: '3vw', marginBottom: '3vw' }} alt='' />
             </div>
           )
         })
