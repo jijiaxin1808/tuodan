@@ -3,7 +3,7 @@ import Analysis from '../pages/analysis'
 import Test from '../pages/test'
 import FemaleTest from '../pages/test/Female'
 import MaleTest from '../pages/test/MaleTest'
-import Experience from "../pages/experience";
+import Experience from '../pages/experience'
 export default [
   {
     name: '首页',
