@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div>
       <Carousel autoplay effect='fade'>
-        <img className='home-carousel-div' src='/2横幅1.png' alt = ""/>
-        <img className='home-carousel-div' src='/2横幅2.jpg'alt = "" />
+        <img className='home-carousel-div' src='/2横幅1.png' alt='' />
+        <img className='home-carousel-div' src='/2横幅2.jpg' alt='' />
       </Carousel>
       <div className='home-bar-1'>
         <div className='buttons'>
@@ -18,12 +18,12 @@ const Home = () => {
             <Link to='/'><p>开始恋爱之旅</p></Link>
           </Button>
         </div>
-        <img src='/3-首页图1右侧小图.jpg'alt = "" />
+        <img src='/3-首页图1右侧小图.jpg' alt='' />
       </div>
       <div className='home-bar-2'>
         <Carousel autoplay effect='fade' style={{ width: '30vw', height: '18vw' }}>
-          <img className='home-carousel-div-s' src='/2横幅1.png' alt = ""/>
-          <img className='home-carousel-div-s' src='/2横幅2.jpg' alt = ""/>
+          <img className='home-carousel-div-s' src='/2横幅1.png' alt='' />
+          <img className='home-carousel-div-s' src='/2横幅2.jpg' alt='' />
         </Carousel>
         <div className='buttons'>
           <p>什么？？<br />你居然还在单身！！</p>
