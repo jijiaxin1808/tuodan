@@ -1,15 +1,15 @@
 export default [
   {
     title: '首页',
-    href: ''
+    href: '/'
   },
   {
     title: '趣味测试',
-    href: ''
+    href: '/test'
   },
   {
     title: '案例分析',
-    href: ''
+    href: '/analysis'
   },
   {
     title: '恋爱经验',
