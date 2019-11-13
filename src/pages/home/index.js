@@ -27,7 +27,7 @@ const Home = () => {
           <img className='home-carousel-div-s' src='/TIM图片20191113195146.png' alt='' />
         </Carousel>
         <div className='buttons'>
-          <p>什么？？<br />你居然还在单身！！</p>
+          <p>什么？？<br />你居然还在单身！！<br/>赶快来测一下你单身的理由！脱单！就是现在!</p>
           <Button className='home-bar-1-button' shape='round' type='primary'>
             <Link to='/test'><p>恋爱测试</p></Link>
           </Button>
