@@ -4,6 +4,7 @@ import Test from '../pages/test'
 import FemaleTest from '../pages/test/Female'
 import MaleTest from '../pages/test/MaleTest'
 import Experience from '../pages/experience'
+import Login from "../pages/login";
 export default [
   {
     name: '首页',
@@ -40,5 +41,11 @@ export default [
     path: '/experience',
     component: Experience,
     key: 5
+  },
+    {
+    name: '登录',
+    path: '/login',
+    component: Login,
+    key: 6
   }
 ]

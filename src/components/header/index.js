@@ -23,7 +23,7 @@ const Header = () => {
               } else {
                 return (
                   <li>
-                    <Link to={Item.href}>
+                    <Link to={item.href}>
                       {item.title}
                     </Link>
                   </li>

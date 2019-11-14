@@ -13,10 +13,10 @@ export default [
   },
   {
     title: '恋爱经验',
-    href: '/experience'
+    href: '/experience?type=-1'
   },
   {
     title: '用户登录',
-    href: '/login'
+    href: "/login"
   }
 ]

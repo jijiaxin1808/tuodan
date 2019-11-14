@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react'
 import Card from 'antd/es/card'
 import experData from '../../assest/experData'
 import './index.less'
-
+import urlHandle from "../../assest/urlHandle"
+import Loading from "../../components/loading"
 const Experience = (props) => {
-  const [type, setType] = useState(1)
+  const [type, setType] = useState(0)
   useEffect(() => {
-
-  }, [props.location.href])
-  if (type === 1) {
+    urlHandle("type")&&setType(urlHandle("type"));
+    
+  }, [props])
+  if (type ) {
+    if(type == -1) {
     return (
       <div>
         <div className='expr-title'>恋爱经验大秘籍</div>
@@ -16,7 +19,7 @@ const Experience = (props) => {
           experData.map((item, index) => {
             return (
               <Card
-                hoverable key={index} onClick={() => { setType(index + 2) }}
+                hoverable key={index} onClick={() => { window.location.href = `/experience?type=${index+1}` }}
                 style={{ width: '70%', height: '20vw', margin: '0 auto', marginTop: '2vw' }} className='expr-card'
               >
                 <img src={item.picUrl} alt='' style={{ width: '25vw', height: '15vw' }} />
@@ -29,17 +32,23 @@ const Experience = (props) => {
           })
         }
       </div>
-    )
-  } else {
+    )}
+    else {
+      console.log("当前type为",type)
     return (
       <div className='message'>
-        <div className='message-title'>{experData[type - 2].title}</div>
-        <div className='message-time'>{experData[type - 2].time}</div>
+        <div className='message-title'>{experData[type - 1].title}</div>
+        <div className='message-time'>{experData[type - 1].time}</div>
         <pre style={{ fontSize: '1vw', wordBreak: 'break-all' }}>
-          {experData[type - 2].allContent}
+          {experData[type - 1].allContent}
         </pre>
       </div>
     )
   }
+
+  } 
+    else return (
+      <Loading />
+  )
 }
 export default Experience
