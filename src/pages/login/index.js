@@ -52,8 +52,8 @@ class NormalLoginForm extends React.Component {
 const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm)
 const Login = () => {
   return (
-    <div>
-
+    <div style={{ paddingTop: '2vw' }}>
+      <div className='expr-title' style={{ marginBottom: '3vw' }}>用户登录 </div>
       <WrappedNormalLoginForm />
     </div>
   )

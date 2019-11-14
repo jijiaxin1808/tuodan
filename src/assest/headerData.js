@@ -1,6 +1,6 @@
 export default [
   {
-    title: '首页',
+    title: '首 页',
     href: '/'
   },
   {

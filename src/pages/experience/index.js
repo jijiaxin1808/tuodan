@@ -10,7 +10,7 @@ const Experience = (props) => {
     urlHandle('type') && setType(urlHandle('type'))
   }, [props])
   if (type) {
-    if (type === -1) {
+    if (type === '-1') {
       return (
         <div>
           <div className='expr-title'>恋爱经验大秘籍</div>
@@ -24,7 +24,7 @@ const Experience = (props) => {
                   <img src={item.picUrl} alt='' style={{ width: '25vw', height: '15vw' }} />
                   <div style={{ width: '60%' }} className='expr-content'>
                     <div className='expr-content-header'><span>{item.title}</span><i>{item.time}</i></div>
-                    <div>{item.content}</div>
+                    <div style={{ fontSize: '1vw' }}>{item.content}</div>
                   </div>
                 </Card>
               )
@@ -38,7 +38,7 @@ const Experience = (props) => {
         <div className='message'>
           <div className='message-title'>{experData[type - 1].title}</div>
           <div className='message-time'>{experData[type - 1].time}</div>
-          <pre style={{ fontSize: '1vw', wordBreak: 'break-all' }}>
+          <pre style={{ fontSize: '1.2vw', wordBreak: 'break-all' }}>
             {experData[type - 1].allContent}
           </pre>
         </div>

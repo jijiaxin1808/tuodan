@@ -10,7 +10,7 @@ const Analysis = () => {
         question.map((item, index) => {
           return (
             <div key={index}>
-              <p style={{ marginBottom: '3vw' }}>{item.title}<br />{item.A1}<br />{item.A2}<br />{item.A3}<br /></p>
+              <p style={{ marginBottom: '3vw', fontSize: '1.5vw' }}>{item.title}<br />{item.A1}<br />{item.A2}<br />{item.A3}<br /></p>
               <Popover content={item.A}>
                 <Button type='primary'>答案</Button>
               </Popover>

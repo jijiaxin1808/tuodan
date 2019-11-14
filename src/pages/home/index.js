@@ -13,7 +13,7 @@ const Home = () => {
       </Carousel>
       <div className='home-bar-1'>
         <div className='buttons'>
-          <p>恋爱日记<br />我们帮你留住心底的小秘密</p>
+          <p>恋爱日记<br /><br />我们帮你留住心底的小秘密</p>
           <Button className='home-bar-1-button' shape='round' type='primary'>
             <Link to='/login'><p>开始恋爱之旅</p></Link>
           </Button>
@@ -37,7 +37,7 @@ const Home = () => {
         <div className='buttons'>
           <p><b>什么？恋爱小白没有经验？</b><br />恋爱达人实例教学,一键式获取恋爱经验<br />和恋爱问题Say Goodbye！</p>
           <Button className='home-bar-1-button-w' shape='round'>
-            <Link to='/experience'><p>恋爱经验</p></Link>
+            <Link to='/experience?type=-1'><p>恋爱经验</p></Link>
           </Button>
           <Button className='home-bar-1-button-w' shape='round'>
             <Link to='/analysis'><p>案例分析</p></Link>
