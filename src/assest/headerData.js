@@ -17,6 +17,6 @@ export default [
   },
   {
     title: '用户登录',
-    href: "/login"
+    href: '/login'
   }
 ]
