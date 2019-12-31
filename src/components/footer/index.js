@@ -1,3 +1,5 @@
+// 底部栏
+
 import React from 'react'
 import './index.less'
 const Footer = () => {
@@ -8,5 +10,5 @@ const Footer = () => {
       <p>河北省秦皇岛市东北大学秦皇岛分校</p>
     </div>
   )
-}
+} 
 export default Footer

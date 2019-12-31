@@ -1,3 +1,4 @@
+// 头部的数据
 export default [
   {
     title: '首 页',
@@ -16,7 +17,7 @@ export default [
     href: '/experience?type=-1'
   },
   {
-    title: '用户登录',
+    title: '恋爱日记',
     href: '/login'
   }
 ]

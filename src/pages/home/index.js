@@ -27,7 +27,7 @@ const Home = () => {
           <img className='home-carousel-div-s' src='/TIM图片20191113195146.png' alt='' />
         </Carousel>
         <div className='buttons'>
-          <p>什么？？<br />你居然还在单身！！<br />赶快来测一下你单身的理由！脱单！就是现在!</p>
+          <p>什么？？<br /><br />你&nbsp;居&nbsp;然&nbsp;还&nbsp;在&nbsp;单&nbsp;身！！<br /><br />赶快来测一下你单身的理由！脱单！就是现在!</p>
           <Button className='home-bar-1-button' shape='round' type='primary'>
             <Link to='/test'><p>恋爱测试</p></Link>
           </Button>
@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       <div className='home-bar-3'>
         <div className='buttons'>
-          <p><b>什么？恋爱小白没有经验？</b><br />恋爱达人实例教学,一键式获取恋爱经验<br />和恋爱问题Say Goodbye！</p>
+          <p><b>什么？恋爱小白没有经验？</b><br /><br />恋爱达人实例教学,一键式获取恋爱经验<br /><br />和恋爱问题Say Goodbye！</p>
           <Button className='home-bar-1-button-w' shape='round'>
             <Link to='/experience?type=-1'><p>恋爱经验</p></Link>
           </Button>
@@ -46,5 +46,5 @@ const Home = () => {
       </div>
     </div>
   )
-}
+} // 这里是首页  单纯的展示  没有什么交互功能
 export default Home

@@ -3,33 +3,40 @@ import Form from 'antd/es/form'
 import Icon from 'antd/es/icon'
 import Input from 'antd/es/input'
 import Button from 'antd/es/button'
-import message from "antd/es/message"
 import './index.less'
 import axios from "axios";
+import message from "antd/es/message"
 import qs from "qs";
-import { Link } from "react-router-dom"
-
 class NormalLoginForm extends React.Component {
-  handleSubmit = (e) => {
+  handleSubmit = e=> {
     e.preventDefault()
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values)
-        let data = {name:values.username,password:values.password};
+        if(values.message === "我是最棒哒") {
+        if(values.password1 === values.password2)  {
+
+        let data = {name:values.username,password:values.password1};
         axios({
-          url:"http://47.93.243.135:3000/login",
+          url:"http://47.93.243.135:3000/res",
           data:qs.stringify(data),
           method:"POST"
         }).then((res)=> {
          if(res.data.code===0) {
-           message.success("登录成功");
-          localStorage.setItem("token",values.username)
-          window.location.href = "/user";
+           message.success("注册成功");
          }  
          else {
-           message.error(res.data.message);
+           message.error(res.data.message)
          }
-        })
+        }) 
+        }
+        else {
+            message.warn("两次输入的密码不一致")
+        }
+        }
+    else {
+            message.warn("请输入 我是最棒哒")
+    }
       }
     })
   };
@@ -49,7 +56,7 @@ class NormalLoginForm extends React.Component {
           )}
         </Form.Item>
         <Form.Item>
-          {getFieldDecorator('password', {
+          {getFieldDecorator('password1', {
             rules: [{ required: true, message: '请输入密码' }]
           })(
             <Input
@@ -59,15 +66,31 @@ class NormalLoginForm extends React.Component {
             />
           )}
         </Form.Item>
+                <Form.Item>
+          {getFieldDecorator('password2', {
+            rules: [{ required: true, message: '请输入密码' }]
+          })(
+            <Input
+              prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
+              type='password'
+              placeholder='请再次输入密码'
+            />
+          )}
+        </Form.Item>
+                <Form.Item>
+          {getFieldDecorator('message', {
+            rules: [{ required: true, message: '请输入' }]
+          })(
+            <Input
+              prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
+              placeholder='请输入 我是最棒哒'
+            />
+          )}
+        </Form.Item>
         <Form.Item className='login-button'>
           <Button type='primary' htmlType='submit' className='login-form-button'>
-            登录
-          </Button>
-          <Link to = "/res">
-          <Button type='primary'  className='login-form-button' style = {{marginLeft:"1vw"}}>
             注册
           </Button>
-          </Link>
         </Form.Item>
       </Form>
     )
@@ -75,15 +98,12 @@ class NormalLoginForm extends React.Component {
 }
 
 const WrappedNormalLoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm)
-const Login = () => {
-  if(localStorage.getItem("token")) {
-    window.location.href = "user"
-  }
+const Res = () => {
   return (
     <div style={{ paddingTop: '2vw' }}>
-      <div className='expr-title' style={{ marginBottom: '3vw' }}>用户登录 </div>
+      <div className='expr-title' style={{ marginBottom: '3vw' }}>注册 </div>
       <WrappedNormalLoginForm />
     </div>
   )
-} // 这里是登录  name 和 password 如果返回值正确的话就存name到localStroge 
-export default Login
+}  // 这里调用的antd的form组件  获取到对应的值 在前端做简单的权限验证  如果对的话就发送请求去注册
+export default Res;

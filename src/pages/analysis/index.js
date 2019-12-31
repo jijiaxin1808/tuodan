@@ -6,6 +6,11 @@ import './index.less'
 const Analysis = () => {
   return (
     <div className='analysis'>
+    <div className='expr-title' style={{ marginBottom: '3vw' }}>
+    来来来！ 我们带你具体问题具体分析   
+    </div>  
+  
+
       {
         question.map((item, index) => {
           return (
@@ -20,6 +25,7 @@ const Analysis = () => {
         })
       }
     </div>
+    // 先是一个title  然后是通过数据中的数组  使用map函数返回每个文章的 card 并且链接到不同的url  
   )
 }
 export default Analysis

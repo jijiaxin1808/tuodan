@@ -12,7 +12,7 @@ const Experience = (props) => {
   if (type) {
     if (type === '-1') {
       return (
-        <div>
+        <div >
           <div className='expr-title'>恋爱经验大秘籍</div>
           {
             experData.map((item, index) => {
@@ -48,6 +48,6 @@ const Experience = (props) => {
     return (
       <Loading />
     )
-  }
+  }//  检测url中的type  如果type是默认-1的话就是返回主页  然后如果不是的话就根据url中的type从数组中返回相应的二级页面
 }
 export default Experience

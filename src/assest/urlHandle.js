@@ -1,3 +1,5 @@
+// 用于获取url中的参数的寒素
+
 const urlHandle = name => {
   const query = window.location.search.substring(1)
   const vars = query.split('&')
